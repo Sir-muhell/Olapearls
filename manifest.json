@@ -1,0 +1,21 @@
+{
+  "short_name": "Olapearl's Hub",
+  "name": "Olapearl's Hub",
+  "description": "Olapearl's Hub",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "img/core-img/wlogo.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#ffa500",
+  "theme_color": "#017478",
+  "display": "standalone",
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://olapearlshub.com"
+  }]
+}
