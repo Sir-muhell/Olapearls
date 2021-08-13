@@ -4,11 +4,11 @@
 
 // DB CONNECT INFO
 $db_host = "localhost";
-//$db_name = "olapearl_blogger";
-$db_name = "olapearlofficial";
+$db_name = "olapearl_blogger";
+//$db_name = "olapearlofficial";
 
-//$db_user = "olapearl_blog";
-$db_user = "root";
+$db_user = "olapearl_blog";
+//$db_user = "root";
 $db_pw = "securemelikekilode";
 
 // DB TABLE INFO

@@ -1,6 +1,6 @@
 <?php
-//$con=mysqli_connect("localhost","olapearl_blogger","securemelikekilode","olapearl_blog");
-$con=mysqli_connect("localhost","root","","olapearlsofficial");
+$con=mysqli_connect("localhost","olapearl_blogger","securemelikekilode","olapearl_blog");
+//$con=mysqli_connect("localhost","root","","olapearlsofficial");
 // Check connection
 if (mysqli_connect_errno())
   {
