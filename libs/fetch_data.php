@@ -635,18 +635,22 @@ function getsingleblog($table){
 		}
       	//if there are rows available display all the results
 		foreach ($result as $onelatest => $onedata) {
-      	# code...
+      $url = $onedata['title'];
+      $url = strtolower($url);
+      $link  = str_replace('?', '', $url);
+			$link  = str_replace(';', '', $link);
+      $link  = str_replace(' ', '-', $link);
 			echo '
 			<div class="col-md-4 blog-grid-top text-center">
 			<div class="b-grid-top  ">
 			<div class="blog_info_left_grid ">
               <div class="single-blog-post  mb-30 wow fadeInUp" data-wow-delay="300ms">
                 <div class="post-thumbnail">
-                  <a href="single.php?id='.$onedata['id'].'"><img style="width:350px;height: 350px" src="blogadmin/images/'.$onedata['photo'].'" alt="Img is not available"></a>
+                  <a href="./'.$link.'"><img style="width:350px;height: 350px" src="blogadmin/images/'.$onedata['photo'].'" alt="Img is not available"></a>
                 </div>
                 <div class="post-content">
                   <div>
-                    <a href="single.php?id='.$onedata['id'].'" class="post-title">'.$onedata['title'].'</a>
+                    <a href="./'.$link.'" class="post-title">'.$onedata['title'].'</a>
                     <span class="post-date">'.$onedata['date'].'</span>
                   </div>
                   </div>
