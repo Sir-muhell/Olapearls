@@ -16,3 +16,7 @@ RewriteCond %{HTTP_HOST} ^olapearlshub\.com [NC]
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://olapearlshub.com/$1 [R,L]
 
+RewriteEngine On    
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([\w-]+)$ single.php?id=$1 [L]
