@@ -3,7 +3,8 @@
 include("database/conn.php");//database config file
 $id=$_REQUEST['id'];
 $link  = str_replace('-', ' ', $id);
-$query="SELECT * from blogs where title LIKE '".$link."%'"; $result=mysqli_query($GLOBALS["___mysqli_ston"],$query) or die ( ((is_object($GLOBALS["___mysqli_ston"]))? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ?$___mysqli_res : true))); 
+$query="SELECT * from blogs where title LIKE '".$link."%'";
+$result=mysqli_query($GLOBALS["___mysqli_ston"],$query) or die ( ((is_object($GLOBALS["___mysqli_ston"]))? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ?$___mysqli_res : true))); 
 $row = mysqli_fetch_assoc($result);
 //pageview count query
 $page=$row['title'];
@@ -250,7 +251,9 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                 <!-- Leave A Reply -->
               <div class="mona-contact-form">
                 <h2 class="mb-4">Leave A Comment</h2>
-
+                <?php
+                $postid=$row['id'];
+                 ?>
                 <!-- Form -->
                 <form id="frm-comment">
                     <div class="row">
@@ -264,7 +267,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                       <div class="col-12 col-md-12 col-sm-12">
                           <textarea name="comment" id="comment" type="text" class="form-control mb-15" placeholder="Add a Comment"></textarea>
                       </div>
-                      <input type="hidden" id="post_id" name="post_id" value="<?php echo $_GET['id']; ?>">
+                      <input type="hidden" id="post_id" name="post_id" value="<?php echo $postid; ?>">
                       <div class="col-12">
                           <div id="msgs"></div>
                           <button type="button" id="submitButton" class="btn mona-btn btn-2 mt-15">Post Comment</button>
@@ -276,7 +279,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                 <div class="comment_area mb-50 clearfix">
                     <h5 class="title"><?php 
                     require("database/db_connect.php");
-                    $postid=$_REQUEST['id'];
+                    $postid=$row['id'];
                     $sql = "SELECT * FROM comment WHERE post_id = $postid ";
                     $result = $con->query($sql);
                     $rowcount=mysqli_num_rows($result); echo $rowcount  .' Comment(s)' ; ?></h5>
