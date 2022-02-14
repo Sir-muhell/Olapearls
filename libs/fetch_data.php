@@ -468,6 +468,7 @@ function getblogridposts($table){
       	//if there are rows available display all the results
 		foreach ($result as $bloggrid => $griditem) {
 			$url = $griditem['title'];
+			echo $title;
       $link  = str_replace(' ', '-', $url);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
