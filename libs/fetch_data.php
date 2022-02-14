@@ -470,8 +470,8 @@ function getblogridposts($table){
 			$url = $griditem['title'];
 			$url = strtolower($url);
 			$link  = str_replace('?', '', $url);
-			$link  = str_replace(';', '', $url);
-      $link  = str_replace(' ', '-', $url);
+			$link  = str_replace(';', '', $link);
+      $link  = str_replace(' ', '-', $link);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
 			<div class="blog_info_left_grid ">
@@ -515,8 +515,8 @@ function getolderposts($table){
       	$url = $op['title'];
       	$url = strtolower($url);
       	$link  = str_replace('?', '', $url);
-			$link  = str_replace(';', '', $url);
-      	$link  = str_replace(' ', '-', $url);
+				$link  = str_replace(';', '', $link);
+      	$link  = str_replace(' ', '-', $link);
 			echo '
               <div class="single-news-area d-flex">
                 <div class="blog-thumbnail">
@@ -726,8 +726,8 @@ function getcategoryblogs($table,$id){
 		foreach ($result as $categories => $cdata) {
       $url = $cdata['title'];
       $link  = str_replace('?', '', $url);
-			$link  = str_replace(';', '', $url);
-      $link  = str_replace(' ', '-', $url);
+			$link  = str_replace(';', '', $link);
+      $link  = str_replace(' ', '-', $link);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
 			<div class="blog_info_left_grid ">
