@@ -366,11 +366,12 @@ function getcategoriesmenu($table)
 		}
       	//if there are rows available display all the results
 		foreach ($result as $blog_categories => $category) {
-      	# code...
+      	$url = strtolower($category);
+      	$link  = str_replace(' ', '-', $link);
 			// echo '<a class="dropdown-item" href="category.php?id='.$category['id'].'">'.$category['name'].'</a>
 			// <div class="dropdown-divider"></div>';
 
-			echo'<li><a href="category.php?id='.$category['id'].'"><i class="fa fa-angle-double-right" aria-hidden="true"></i>'.$category['name'].'</li>';
+			echo'<li><a href="category/'.$link.'"><i class="fa fa-angle-double-right" aria-hidden="true"></i>'.$category['name'].'</li>';
 		}
 	}
 
