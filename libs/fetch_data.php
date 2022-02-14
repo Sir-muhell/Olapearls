@@ -469,6 +469,8 @@ function getblogridposts($table){
 		foreach ($result as $bloggrid => $griditem) {
 			$url = $griditem['title'];
 			$url = strtolower($url);
+			$link  = str_replace('?', '', $url);
+			$link  = str_replace(';', '', $url);
       $link  = str_replace(' ', '-', $url);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
@@ -512,6 +514,8 @@ function getolderposts($table){
 		foreach ($result as $olderposts => $op) {
       	$url = $op['title'];
       	$url = strtolower($url);
+      	$link  = str_replace('?', '', $url);
+			$link  = str_replace(';', '', $url);
       	$link  = str_replace(' ', '-', $url);
 			echo '
               <div class="single-news-area d-flex">
@@ -721,6 +725,8 @@ function getcategoryblogs($table,$id){
       	//if there are rows available display all the results
 		foreach ($result as $categories => $cdata) {
       $url = $cdata['title'];
+      $link  = str_replace('?', '', $url);
+			$link  = str_replace(';', '', $url);
       $link  = str_replace(' ', '-', $url);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
