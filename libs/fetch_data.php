@@ -367,7 +367,7 @@ function getcategoriesmenu($table)
       	//if there are rows available display all the results
 		foreach ($result as $blog_categories => $category) {
       	$url = strtolower($category);
-      	$link  = str_replace(' ', '-', $link);
+      	$link  = str_replace(' ', '-', $url);
 			// echo '<a class="dropdown-item" href="category.php?id='.$category['id'].'">'.$category['name'].'</a>
 			// <div class="dropdown-divider"></div>';
 
