@@ -12,7 +12,8 @@ $count="SELECT * FROM page_hits WHERE page='".$page."'";$feedback=mysqli_query($
 $roo=mysqli_fetch_assoc($feedback);?>
 <?php
 session_start();
-$_SESSION["postid"] = $id;
+$idd = $row['id'];
+$_SESSION["postid"] = $idd;
 ?>
 
 <?php
