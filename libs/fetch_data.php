@@ -467,17 +467,18 @@ function getblogridposts($table){
 		}
       	//if there are rows available display all the results
 		foreach ($result as $bloggrid => $griditem) {
-      	# code...
+			$url = $griditem['title'];
+      $link  = str_replace(' ', '-', $url);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
 			<div class="blog_info_left_grid ">
-			<a href="single.php?id='.$griditem['id'].'">
+			<a href="single.php?id='.$link.'">
 			<img src="blogadmin/images/'.$griditem['photo'].'" class="img-fluid" alt="" style="width:350px;height:350px">
 			</a>
 			</div>
 			<div class="post-content">
 			<h3>
-			<a href="single.php?id='.$griditem['id'].'" class="post-title">'.$griditem['title'].'</a>
+			<a href="single.php?id='.$link.'" class="post-title">'.$griditem['title'].'</a>
 			</h3>
 			</div>
 			<ul class="blog-icons">
@@ -508,15 +509,15 @@ function getolderposts($table){
 		}
       	//if there are rows available display all the results
 		foreach ($result as $olderposts => $op) {
-      	# code...
-			
+      	$url = $op['title'];
+      	$link  = str_replace(' ', '-', $url);
 			echo '
               <div class="single-news-area d-flex">
                 <div class="blog-thumbnail">
-                  <a href="single.php?id='.$op['id'].'"><img src="blogadmin/images/'.$op['photo'].'" class="img-fluid" alt="Image is not available" style="width:100px;height:70px"></a>
+                  <a href="single.php?id='.$link.'"><img src="blogadmin/images/'.$op['photo'].'" class="img-fluid" alt="Image is not available" style="width:100px;height:70px"></a>
                 </div>
                 <div class="blog-content">
-                  <a href="single.php?id='.$op['id'].'" class="post-title">'.$op['title'].'</a>
+                  <a href="single.php?id='.$link.'" class="post-title">'.$op['title'].'</a>
                   <span class="post-date"> '.$op['date'].'</span>
                 </div>
               </div>
@@ -717,25 +718,27 @@ function getcategoryblogs($table,$id){
 		}
       	//if there are rows available display all the results
 		foreach ($result as $categories => $cdata) {
-      	# code...
-			echo 			'<div class="col-md-6 blog-grid-top">
-			<div class="b-grid-top">
-			<div class="blog_info_left_grid">
-			<a href="single.php?id='.$cdata['id'].'">
-			<img src="blogadmin/images/'.$cdata['photo'].'" class="img-fluid" alt="" style="width:350px;height:250px">
+      $url = $cdata['title'];
+      $link  = str_replace(' ', '-', $url);
+			echo 			'
+
+			<div class="col-md-6 blog-grid-top text-center">
+			<div class="b-grid-top  ">
+			<div class="blog_info_left_grid ">
+			<a href="single.php?id='.$link.'">
+			<img src="blogadmin/images/'.$cdata['photo'].'" class="img-fluid" alt="" style="width:350px;height:350px">
 			</a>
 			</div>
 			<div class="post-content">
 			<h3>
-			<a href="single.php?id='.$cdata['id'].'" class="post-title">'.$cdata['title'].'</a>
+			<a href="single.php?id='.$link.'" class="post-title">'.$cdata['title'].'</a>
 			</h3>
 			</div>
 			<ul class="blog-icons">
-			
-			<span class="post-date"><i class="fa fa-calender"></i>'.$cdata['date'].'</span>
-			
-			<span class="post-date"><i class="fa fa-tags" style="margin-bottom: 30px"></i> '.$cdata['tags'].'</span>
+			<span class="post-date">'.$cdata['date'].'</span>
 			</div>
+			<span class="post-date"><i class="fa fa-tags" style="margin-bottom: 30px"></i> '.$cdata['tags'].'</span>
+			
 
 			</ul>
 			</div>';

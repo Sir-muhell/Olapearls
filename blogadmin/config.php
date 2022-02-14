@@ -1,8 +1,12 @@
 <?php
 	$dbServer = 'localhost';
+
 	$dbUsername = 'olapearl_blogger';
 	$dbPassword = 'securemelikekilode';
-	$dbDatabase = 'olapearl_blog';
+	//$dbUsername = 'root';
+	//$dbPassword = '';
+
+	$dbDatabase = 'olapearls_blog';
 
 	$adminConfig = array(
 		'adminUsername' => "admin",
