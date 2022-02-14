@@ -721,7 +721,6 @@ function getcategoryblogs($table,$id){
       	//if there are rows available display all the results
 		foreach ($result as $categories => $cdata) {
       $url = $cdata['title'];
-      $url = strtolower($url);
       $link  = str_replace(' ', '-', $url);
 			echo '<div class="col-md-6 blog-grid-top text-center">
 			<div class="b-grid-top  ">
