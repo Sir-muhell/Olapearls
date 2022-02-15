@@ -15,7 +15,7 @@
   <title><?php getwebname("titles"); echo"|"; gettagline("titles");?></title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="../img/core-img/llogo.png">
-  <link rel="manifest" href="../manifest.json">
+  <link rel="manifest" href="../$rowmanifest.json">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../style.css">
@@ -166,7 +166,24 @@ $row = mysqli_fetch_assoc($result);?>
 				</div>
 				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
           <div class="right-blog-info text-left" >
-            <?php include("../include/widget.php"); ?>
+                        <div class="single-widget-area search-widget-area mb-80">
+              <form action="search.php" method="post" name="form">
+              <input type="search" name="search" class="form-control" placeholder="Search and hit enter..." required>
+              <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+
+            <!-- Single Widget Area -->
+            <div class="single-widget-area catagories-widget mb-80"  style="padding-left: 100px; ">
+              <h5 class="widget-title">Categories</h5>
+
+              <!-- catagories list -->
+              <ul class="catagories-list">
+                <?php getcategoriesmenu("blog_categories"); ?>
+              </ul>
+            </div>
+
+           
             <br><br><br>
             <div class="single-widget-area catagories-widget mb-20" style="padding-left:20px; padding-right: 20px; padding-bottom: 30px">
               <h5 class="widget-title" style="padding-left: 80px;">Older Posts</h5>
