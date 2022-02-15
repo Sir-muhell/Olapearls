@@ -739,7 +739,7 @@ function getcategoryblogs($table,$id){
 			<div class="b-grid-top  ">
 			<div class="blog_info_left_grid ">
 			<a href="./'.$link.'">
-			<img src="blogadmin/images/'.$cdata['photo'].'" class="img-fluid" alt="" style="width:350px;height:350px">
+			<img src="../blogadmin/images/'.$cdata['photo'].'" class="img-fluid" alt="" style="width:350px;height:350px">
 			</a>
 			</div>
 			<div class="post-content">
