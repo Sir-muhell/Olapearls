@@ -24,4 +24,4 @@ RewriteRule ^([\w-]+)$ single.php?id=$1 [L]
 RewriteEngine On    
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([\w-]+)$ category.php?id=$1 [L]
+RewriteRule ^([\w-]+)$ category.php?name=$1 [L]

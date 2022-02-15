@@ -28,7 +28,7 @@
             </div>
 <?php //code to get the item using its id
 include("database/conn.php");//database config file
-$id=$_REQUEST['id'];
+$id=$_REQUEST['name'];
 if ("$id" == '') {
  header("location: ./oops ");
 }
