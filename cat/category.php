@@ -1,4 +1,4 @@
-<?php require("libs/fetch_data.php");?>
+<?php require("fetch_data.php");?>
 <?php include("../include/header.php"); ?>
 <!-- Main Header Start -->
     <div class="main-header-area">
