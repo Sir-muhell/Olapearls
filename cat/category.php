@@ -27,7 +27,7 @@
               <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
             </div>
 <?php //code to get the item using its id
-include("database/conn.php");//database config file
+include("../database/conn.php");//database config file
 $id=$_REQUEST['name'];
 if ("$id" == '') {
  header("location: ./oops ");
@@ -60,7 +60,7 @@ $row = mysqli_fetch_assoc($result);?>
       </div>
     </div>
   </header>
-<?php include("include/top_search.php"); ?> 
+<?php include("../include/top_search.php"); ?> 
 <!-- ***** Breadcrumb Area Start ***** -->
   <div class="breadcumb-area">
     <div class="container h-100">
@@ -98,7 +98,7 @@ $row = mysqli_fetch_assoc($result);?>
 				</div>
 				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
           <div class="right-blog-info text-left" >
-            <?php include("include/widget.php"); ?>
+            <?php include("../include/widget.php"); ?>
             <br><br><br>
             <div class="single-widget-area catagories-widget mb-20" style="padding-left:20px; padding-right: 20px; padding-bottom: 30px">
               <h5 class="widget-title" style="padding-left: 80px;">Older Posts</h5>
@@ -110,4 +110,4 @@ $row = mysqli_fetch_assoc($result);?>
           </div>
         </aside>
 	</section>
-<?php include("include/footer.php"); ?>
+<?php include("../include/footer.php"); ?>
