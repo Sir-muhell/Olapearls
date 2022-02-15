@@ -1,5 +1,5 @@
-<?php require("libs/fetch_data.php");?>
-<?php include("include/header.php"); ?>
+<?php require("../libs/fetch_data.php");?>
+<?php include("../include/header.php"); ?>
 <!-- Main Header Start -->
     <div class="main-header-area">
       <div class="classy-nav-container breakpoint-off">
