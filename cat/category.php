@@ -30,7 +30,7 @@
 include("../database/conn.php");//database config file
 $id=$_REQUEST['name'];
 if ("$id" == '') {
- header("location: ./oops ");
+ header("location: ../oops ");
 }
 $link  = str_replace('-', ' ', $id);
 $query="SELECT * from blog_categories where `name` LIKE '%$link%'";
