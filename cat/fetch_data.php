@@ -522,7 +522,7 @@ function getolderposts($table){
 			echo '
               <div class="single-news-area d-flex">
                 <div class="blog-thumbnail">
-                  <a href="./'.$link.'"><img src="blogadmin/images/'.$op['photo'].'" class="img-fluid" alt="Image is not available" style="width:100px;height:70px"></a>
+                  <a href="./'.$link.'"><img src="../blogadmin/images/'.$op['photo'].'" class="img-fluid" alt="Image is not available" style="width:100px;height:70px"></a>
                 </div>
                 <div class="blog-content">
                   <a href="./'.$link.'" class="post-title">'.$op['title'].'</a>
