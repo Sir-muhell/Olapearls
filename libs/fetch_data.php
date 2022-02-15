@@ -353,7 +353,7 @@ function getlinks($table,$platform){
 
 function getcategoriesmenu($table)
 {
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table";
 	if ($result=mysqli_query($con,$sql))
 	{
