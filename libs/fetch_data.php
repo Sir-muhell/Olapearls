@@ -372,7 +372,7 @@ function getcategoriesmenu($table)
 			// echo '<a class="dropdown-item" href="category.php?id='.$category['id'].'">'.$category['name'].'</a>
 			// <div class="dropdown-divider"></div>';
       	
-			echo'<li><a href="categories/'.$link.'"><i class="fa fa-angle-double-right" aria-hidden="true"></i>'.$category['name'].'</li></a>';
+			echo'<li><a href="cat/'.$link.'"><i class="fa fa-angle-double-right" aria-hidden="true"></i>'.$category['name'].'</li></a>';
 		}
 	}
 
