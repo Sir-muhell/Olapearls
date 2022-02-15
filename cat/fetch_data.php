@@ -1,6 +1,6 @@
 <?php 
 function gettagline($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -22,7 +22,7 @@ function gettagline($table){
 }
 
 function getviews(){
-						require("database/db_connect.php");
+						require("../database/db_connect.php");
 	                    require ("blogadmin/db.php");
                           $sql="SELECT * FROM page_hits ORDER BY page";
 
@@ -39,7 +39,7 @@ function getviews(){
 }
 
 function geticon($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -60,7 +60,7 @@ function geticon($table){
 	mysqli_close($con);
 }
 function getjavascripts($table){
-require("database/db_connect.php");
+require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -81,7 +81,7 @@ require("database/db_connect.php");
 	mysqli_close($con);
 }
 function getsharingscript($table){
-require("database/db_connect.php");
+require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -102,7 +102,7 @@ require("database/db_connect.php");
 	mysqli_close($con);
 }
 function getcommentsscript($table){
-require("database/db_connect.php");
+require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -123,7 +123,7 @@ require("database/db_connect.php");
 	mysqli_close($con);
 }
 function getshortdescription($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -144,7 +144,7 @@ function getshortdescription($table){
 	mysqli_close($con);
 }
 function getcontacts($table,$num){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -181,7 +181,7 @@ function getcontacts($table,$num){
 	mysqli_close($con);
 }
 function getdetaileddescription($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -202,7 +202,7 @@ function getdetaileddescription($table){
 	mysqli_close($con);
 }
 function countcategories(){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM blog_categories LIMIT 10";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -232,7 +232,7 @@ function countcategories(){
 	mysqli_close($con);
 }
 function getbannertext($table,$position){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -268,7 +268,7 @@ function getbannertext($table,$position){
 	mysqli_close($con);
 }
 function getwebname($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -289,7 +289,7 @@ function getwebname($table){
 	mysqli_close($con);
 }
 function getkeywords($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -310,7 +310,7 @@ function getkeywords($table){
 	mysqli_close($con);
 }
 function getlinks($table,$platform){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -353,7 +353,7 @@ function getlinks($table,$platform){
 
 function getcategoriesmenu($table)
 {
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -382,7 +382,7 @@ function getcategoriesmenu($table)
 
 function getcategories($table)
 {
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -408,7 +408,7 @@ function getcategories($table)
 
 
 function getbottomsliderposts($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table WHERE posted='publish' ORDER BY id DESC LIMIT 3";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -456,7 +456,7 @@ function getbottomsliderposts($table){
 
 
 function getblogridposts($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table WHERE posted='publish' ORDER BY id DESC LIMIT 10";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -501,7 +501,7 @@ function getblogridposts($table){
 
 }
 function getolderposts($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table WHERE posted='publish' ORDER BY id DESC LIMIT 5 OFFSET 1";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -538,7 +538,7 @@ function getolderposts($table){
 	mysqli_close($con);
 }
 function getfour($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ORDER BY id DESC LIMIT 4";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -571,7 +571,7 @@ function getfour($table){
 	mysqli_close($con);
 }
 function getonelatest($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ORDER BY id DESC LIMIT 1";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -624,7 +624,7 @@ function getonelatest($table){
 
 
 function getsingleblog($table){
-			require("database/db_connect.php");
+			require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ORDER BY id DESC LIMIT 3";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -670,7 +670,7 @@ function getsingleblog($table){
 
 
 function geteditorschoice($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table ORDER BY id DESC LIMIT 8";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -717,7 +717,7 @@ function geteditorschoice($table){
 	mysqli_close($con);
 }
 function getcategoryblogs($table,$id){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	$sql="SELECT * FROM $table WHERE category='$id' ORDER BY id DESC LIMIT 10";
 	if ($result=mysqli_query($con,$sql))
 	{
@@ -767,7 +767,7 @@ function getcategoryblogs($table,$id){
 	mysqli_close($con);
 }
 function getpopularposts($table){
-	require("database/db_connect.php");
+	require("../database/db_connect.php");
 	#get most viewed 3 pages from pagehits
 	$sql="SELECT * FROM $table ORDER BY count DESC LIMIT 3";
 	if ($result=mysqli_query($con,$sql))
