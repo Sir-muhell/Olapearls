@@ -109,4 +109,4 @@ $row = mysqli_fetch_assoc($result);?>
           </div>
         </aside>
 	</section>
-	 <?php include("include/footer.php"); ?>
+<?php include("include/footer.php"); ?>
