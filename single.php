@@ -252,9 +252,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                 <!-- Leave A Reply -->
               <div class="mona-contact-form">
                 <h2 class="mb-4">Leave A Comment</h2>
-                <?php
-                $postid= echo $row['id'];
-                 ?>
+               
                 <!-- Form -->
                 <form id="frm-comment">
                     <div class="row">
