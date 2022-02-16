@@ -213,7 +213,7 @@
            <!-- Catagories Nav -->
             <nav>
               <div class="copywrite-text">
-                <a href="../index">Home</a>&nbsp|&nbsp<a href="../blog">Blog</a>&nbsp|&nbsp<a href="../categories">Categories</a>&nbsp|&nbsp<a href="../about">About</a>&nbsp|&nbsp<a href="../contact">Contact</a>
+                <a href="../index">Home</a>&nbsp|&nbsp<a href="../blog">Blog</a>&nbsp|&nbsp<a href="./">Categories</a>&nbsp|&nbsp<a href="../about">About</a>&nbsp|&nbsp<a href="../contact">Contact</a>
                 <h5  style=" color: #a6a6a6" ><small>&copy;  Olapearl's Hub <?php $date = date('Y'); echo $date;?></h5></small>
                 </div>
             </nav><br><br>
