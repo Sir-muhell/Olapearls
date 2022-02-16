@@ -1,4 +1,4 @@
-<?php require("fetch_data.php");?>
+<?php require("./fetch_data.php");?>
 <!DOCTYPE html>
 <html lang="en">
 
