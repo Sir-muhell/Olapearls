@@ -216,7 +216,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                   <a href="#comment_no" class="post-comments"><i class="fa fa-comments" aria-hidden="true"></i> 
                   <?php 
                   require("database/db_connect.php");
-                  $postid=$row['id'];;
+                  $postid=$row['id'];
                   $sql = "SELECT * FROM comment WHERE post_id = $postid ";
                   $result = $con->query($sql);
                   $rowcount=mysqli_num_rows($result); echo $rowcount ; ?></a>
@@ -243,6 +243,10 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                         <span class="fa fa-facebook-square fa-2x"></span></a>
                     <a href="http://twitter.com/home?status=<?php echo $url; ?>" target="_blank" title="Twitter" data-media="<?php echo $row['photo']; ?>">
                         <span class="fa fa-twitter-square fa-2x"></span></a>
+                    <a onclick="copy()" target="_blank" title="Copy" data-media="<?php echo $row['photo']; ?>">
+                        <span class="fa fa-copy fa-2x"></span></a>
+                    <input type="text" hidden value="<?php echo $url; ?><?php echo $url; ?>" id="copy">
+                    <div><h6 id="copied"></h6></div>
                     <br><br>
                   </div>
                 </div>
@@ -314,5 +318,20 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
     </div>
   </section>
   <!-- ***** Blog Details Area End ***** -->
-  
+  <script>
+        function copy() {
+    /* Get the text field */
+    var copyText = document.getElementById("copy");
+
+    /* Select the text field */
+    copyText.select("copy");
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+
+    /* Alert the copied text */
+
+    document.getElementById("copied").innerHTML = "Post Link Copied!";;
+    }
+  </script>
 <?php include("include/footer.php"); ?>
