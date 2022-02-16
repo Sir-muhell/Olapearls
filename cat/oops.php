@@ -15,7 +15,7 @@
   <title><?php getwebname("titles"); echo"|"; gettagline("titles");?></title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="../img/core-img/llogo.png">
-  <link rel="manifest" href="../$rowmanifest.json">
+  <link rel="manifest" href="manifest.json">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../style.css">
@@ -60,7 +60,7 @@
 
           <!-- Logo -->
           <div style="">
-             <a class="nav-brand" href="../index" style="width:400px"><img src="../img/core-img/newname.png" alt="">
+             <a class="nav-brand" href="index.html" style="width:400px"><img src="../img/core-img/newname.png" alt="">
             </a>
           </div>
          
@@ -75,30 +75,15 @@
             <div class="classycloseIcon">
               <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
             </div>
-<?php //code to get the item using its id
-include("../database/conn.php");//database config file
-$id=$_REQUEST['name'];
-if ("$id" == '' || ) {
- header("location: ./oops ");
-}
-$link  = str_replace('-', ' ', $id);
-$query="SELECT * from blog_categories where `name` LIKE '%$link%'";
-$result=mysqli_query($GLOBALS["___mysqli_ston"],$query) or die ( ((is_object($GLOBALS["___mysqli_ston"]))? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ?$___mysqli_res : true))); 
 
-$id=$_REQUEST['name'];
-if ($id == '' || $result == '') {
- header("location: ./oops ");
-}
-
-$row = mysqli_fetch_assoc($result);?>
 
 
             <!-- Nav Start -->
             <div class="classynav">
               <ul id="nav">
-                <li><a href="../">Home</a></li>
+                <li><a href="../index">Home</a></li>
                 <li><a href="../blog">Blog</a></li>
-                <li class="current-item"><a href="../categories">Categories</a></li>
+                <li><a href="./cat">Categories</a></li>
                 <li><a href="../about">About</a></li>
                 <li><a href="../contact">Contact</a></li>
               </ul>
@@ -135,73 +120,37 @@ $row = mysqli_fetch_assoc($result);?>
     </div>
   </div>
   <!-- ***** Top Search Area End ***** -->
-<!-- ***** Breadcrumb Area Start ***** -->
-  <div class="breadcumb-area">
-    <div class="container h-100">
-      <div class="row h-100 align-items-end">
+
+
+  <!-- ***** Welcome Area Start ***** -->
+  <section class="welcome-area">
+    <!-- Welcome Slides -->
+   
+  <!-- ***** CTA Area Start ***** -->
+  <section class="text-center" style="text-align: center; padding-top: 20%; padding-bottom: 20%">
+    <div class="container">
+      <div class="row">
         <div class="col-12">
-          <div class="breadcumb--con">
-            <h2 class="title">Blog</h2>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../"><i class="fa fa-home"></i> Home</a></li>
-                <li class="breadcrumb-item"><a href="blog">Blog</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Category (<?php echo $row['name']; ?>)</li>
-              </ol>
-            </nav>
+          <div style="color: ; display: inline-block; margin-top: 50px;">
+            <h3>Oh! Snap :( <br>Sorry, you have no access to this page or page doesn't exist.</h3>
+            <br>
+            
+            <a href="#" class="btn mona-btn" onclick="goBack();">Go Back</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- ***** Breadcrumb Area End ***** -->
-  <br>
+  </section>
+  <!-- ***** CTA Area End ***** -->
 
-<section class="main-content-w3layouts-agileits">
-		<div class="container">
-		
-			<div class="row inner-sec">
-				<!--left-->
-				<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
-					<div class="row mb-4">
-						<?php  
-							$categoryid=$row['id'];
-							getcategoryblogs("blogs",$categoryid);
-						?>
-					</div>
-				</div>
-				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
-          <div class="right-blog-info text-left" >
-                        <div class="single-widget-area search-widget-area mb-80">
-              <form action="search.php" method="post" name="form">
-              <input type="search" name="search" class="form-control" placeholder="Search and hit enter..." required>
-              <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-            </div>
-
-            <!-- Single Widget Area -->
-            <div class="single-widget-area catagories-widget mb-80"  style="padding-left: 100px; ">
-              <h5 class="widget-title">Categories</h5>
-
-              <!-- catagories list -->
-              <ul class="catagories-list">
-                <?php getcategoriesmenu("blog_categories"); ?>
-              </ul>
-            </div>
-
-           
-            <br><br><br>
-            <div class="single-widget-area catagories-widget mb-20" style="padding-left:20px; padding-right: 20px; padding-bottom: 30px">
-              <h5 class="widget-title" style="padding-left: 80px;">Older Posts</h5>
-                  <!-- catagories list -->
-              <ul class="catagories-list">
-                <?php getolderposts("blogs");?>
-              </ul>
-            </div>
-          </div>
-        </aside>
-	</section>
- <!-- ***** Footer Area Start ***** -->
+  
+  
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+  <!-- ***** Footer Area Start ***** -->
   <footer class="footer-area section-padding-80-0">
     <div class="container">
       <div class="row justify-content-between">
@@ -215,7 +164,7 @@ $row = mysqli_fetch_assoc($result);?>
            <!-- Catagories Nav -->
             <nav>
               <div class="copywrite-text">
-                <a href="../index">Home</a>&nbsp|&nbsp<a href="../blog">Blog</a>&nbsp|&nbsp<a href="../categories">Categories</a>&nbsp|&nbsp<a href="../about">About</a>&nbsp|&nbsp<a href="../contact">Contact</a>
+                <a href="../index">Home</a>&nbsp|&nbsp<a href="../blog">Blog</a>&nbsp|&nbsp<a href="./cat">Categories</a>&nbsp|&nbsp<a href="../about">About</a>&nbsp|&nbsp<a href="../contact">Contact</a>
                 <h5  style=" color: #a6a6a6" ><small>&copy;  Olapearl's Hub <?php $date = date('Y'); echo $date;?></h5></small>
                 </div>
             </nav><br><br>
@@ -244,7 +193,7 @@ $row = mysqli_fetch_assoc($result);?>
             <!-- Footer Content -->
             <div class="footer-content mb-30">
               <h4></h4>
-              <h6>Olapearl's Hub is an institution where souls are saved and lives are blessed. It is a college where lives are pruned. The center of it all is Jesus...<a href="./about" style="color:red">Read more</a></h6>
+              <h6>Olapearl's Hub is an institution where souls are saved and lives are blessed. It is a college where lives are pruned. The center of it all is Jesus...<a href="../about" style="color:red">Read more</a></h6>
             </div>
             
             <!-- Social Info -->
@@ -310,7 +259,7 @@ $row = mysqli_fetch_assoc($result);?>
       });
   }
 </script>
-<script src="../service-worker.js">
+<script src="service-worker.js">
         // Service worker for Progressive Web App
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js', {
@@ -328,3 +277,5 @@ $row = mysqli_fetch_assoc($result);?>
 </body>
 
 </html>
+
+ 
