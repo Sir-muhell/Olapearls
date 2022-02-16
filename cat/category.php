@@ -77,10 +77,7 @@
             </div>
 <?php //code to get the item using its id
 include("../database/conn.php");//database config file
-$id=$_REQUEST['name'];
-if ("$id" == '' || ) {
- header("location: ./oops ");
-}
+
 $link  = str_replace('-', ' ', $id);
 $query="SELECT * from blog_categories where `name` LIKE '%$link%'";
 $result=mysqli_query($GLOBALS["___mysqli_ston"],$query) or die ( ((is_object($GLOBALS["___mysqli_ston"]))? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ?$___mysqli_res : true))); 
