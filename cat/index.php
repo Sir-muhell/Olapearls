@@ -147,27 +147,27 @@
 				<!--left-->
 				<div class="col-lg-8 left-blog-info-w3layouts-agileits ">
 					<div class=" row mb-50 container" >
-			<h4 class="title"><a href="category.php?id=10">Sunday Digest</a></h4>
+			<h4 class="title"><a href="sunday-digest">Sunday Digest</a></h4>
              <p>This category under which the gospel and everything around the gospel is posted.<br>it is like an online church. The word of God is dished out, we eat it, savor it and digest it.<br>It is a medium to observe. 2nd Corithians 3:18<br>
-             <a href="category.php?id=10" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
+             <a href="sunday-digest" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
              
 
 
-             <h4 class="title"><a href="category.php?id=11">Monday Challenge</a></h4>
+             <h4 class="title"><a href="monday-challenge">Monday Challenge</a></h4>
              <p>This category gives weekly christianity is no room for mediocrity.<br>We got to give it what it what it takes to be earthly relevant while we remain heavenly conscious.
-             <br><a href="category.php?id=11" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
+             <br><a href="monday-challenge" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
 
-             <h4 class="title"><a href="category.php?id=12">Weekend Groove</a></h4>
+             <h4 class="title"><a href="weekend-groove">Weekend Groove</a></h4>
              <p>It is a platform where people are interviewe an jesus is taken to the street, an experts of various fields such as skin care routine, relationship experts, chiefs etc are invited also.
-             <br><a href="category.php?id=12" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
+             <br><a href="weekend-groove" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
 
              <h4 class="title"><a href="category.php?id=13">Book Review</a></h4>
              <p>A monthly platform where relevant books are shared at the beginning of the month an is reviewed at the end of the month.
-             <br><a href="category.php?id=13" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
+             <br><a href="book-review" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
 
-             <h4 class="title"><a href="category.php?id=14">Vocabulary</a></h4><br>
-             <p>New words in each book shared monthly form the book review is posted here.<br>
-             <br><a href="category.php?id=14" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
+             <h4 class="title"><a href="vocabulary">Vocabulary</a></h4>
+             <p style="float: left; margin-top: 20px;">New words in each book shared monthly form the book review is posted here.
+             <br><a href="vocabulary" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
 
 					</div>
 				</div>
