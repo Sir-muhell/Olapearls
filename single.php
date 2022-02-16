@@ -216,7 +216,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                   <a href="#comment_no" class="post-comments"><i class="fa fa-comments" aria-hidden="true"></i> 
                   <?php 
                   require("database/db_connect.php");
-                  $postid=$_REQUEST['id'];
+                  $postid=$row['id'];;
                   $sql = "SELECT * FROM comment WHERE post_id = $postid ";
                   $result = $con->query($sql);
                   $rowcount=mysqli_num_rows($result); echo $rowcount ; ?></a>
@@ -253,7 +253,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
               <div class="mona-contact-form">
                 <h2 class="mb-4">Leave A Comment</h2>
                 <?php
-                $postid=$row['id'];
+                $postid= echo $row['id'];
                  ?>
                 <!-- Form -->
                 <form id="frm-comment">
@@ -280,7 +280,7 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                 <div class="comment_area mb-50 clearfix">
                     <h5 class="title"><?php 
                     require("database/db_connect.php");
-                    $postid=$row['id'];
+                    $postid= echo $row['id'];
                     $sql = "SELECT * FROM comment WHERE post_id = $postid ";
                     $result = $con->query($sql);
                     $rowcount=mysqli_num_rows($result); echo $rowcount  .' Comment(s)' ; ?></h5>
