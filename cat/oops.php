@@ -15,7 +15,7 @@
   <title><?php getwebname("titles"); echo"|"; gettagline("titles");?></title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="../img/core-img/llogo.png">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="../manifest.json">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../style.css">
