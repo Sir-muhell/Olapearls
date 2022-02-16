@@ -278,7 +278,6 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                 <div class="comment_area mb-50 clearfix">
                     <h5 class="title"><?php 
                     require("database/db_connect.php");
-                    $postid= echo $row['id'];
                     $sql = "SELECT * FROM comment WHERE post_id = $postid ";
                     $result = $con->query($sql);
                     $rowcount=mysqli_num_rows($result); echo $rowcount  .' Comment(s)' ; ?></h5>
