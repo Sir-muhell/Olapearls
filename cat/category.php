@@ -9,22 +9,22 @@
     <meta name="keywords" content="<?php getkeywords("titles");?>">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#017478"> 
-  
+      
+    <?php //code to get the item using its id
+    include("../database/conn.php");//database config file
+    $id=$_REQUEST['name'];
+    $link  = str_replace('-', ' ', $id);
+    $query="SELECT * from blog_categories WHERE `name` = '$link'";
+    $result=mysqli_query($GLOBALS["___mysqli_ston"],$query) or die ( ((is_object($GLOBALS["___mysqli_ston"]))? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ?$___mysqli_res : true))); 
+    $row = mysqli_fetch_assoc($result);
 
+    if ($id == '' || $row == '') {
+     header("location: ./oops ");
+    }
+
+    ?>
   <!-- Title -->
-  <?php //code to get the item using its id
-include("../database/conn.php");//database config file
-$id=$_REQUEST['name'];
-$link  = str_replace('-', ' ', $id);
-$query="SELECT * from blog_categories WHERE `name` = '$link'";
-$result=mysqli_query($GLOBALS["___mysqli_ston"],$query) or die ( ((is_object($GLOBALS["___mysqli_ston"]))? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ?$___mysqli_res : true))); 
-$row = mysqli_fetch_assoc($result);
-
-if ($id == '' || $row == '') {
- header("location: ./oops ");
-}
-
-?>
+  
   <title><?php getwebname("titles"); echo"|"; gettagline("titles");?></title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="../img/core-img/llogo.png">
@@ -96,7 +96,7 @@ if ($id == '' || $row == '') {
               <ul id="nav">
                 <li><a href="../">Home</a></li>
                 <li><a href="../blog">Blog</a></li>
-                <li class="current-item"><a href="../categories">Categories</a></li>
+                <li class="current-item"><a href="./cat">Categories</a></li>
                 <li><a href="../about">About</a></li>
                 <li><a href="../contact">Contact</a></li>
               </ul>
