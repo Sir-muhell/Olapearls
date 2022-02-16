@@ -1,5 +1,5 @@
- <?php require("libs/fetch_data.php");?>
-<?php include("include/header.php"); ?>
+ <?php require("fetch_data.php");?>
+<?php include("../include/header.php"); ?>
 <!-- Main Header Start -->
     <div class="main-header-area">
       <div class="classy-nav-container breakpoint-off">
@@ -49,7 +49,7 @@
       </div>
     </div>
   </header>
-<?php include("include/top_search.php"); ?> 
+<?php include("../include/top_search.php"); ?> 
 <!-- ***** Breadcrumb Area Start ***** -->
 <div id="page-wrapper">
   <div class="breadcumb-area">
@@ -124,4 +124,4 @@
             </div>
             </div>
 	</section>
-	 <?php include("include/footer.php"); ?>
+	 <?php include("../include/footer.php"); ?>

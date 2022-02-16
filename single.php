@@ -244,9 +244,9 @@ $string = substr($longString,0,strpos($longString,' ',50)) . " ...";
                     <a href="http://twitter.com/home?status=<?php echo $url; ?>" target="_blank" title="Twitter" data-media="<?php echo $row['photo']; ?>">
                         <span class="fa fa-twitter-square fa-2x"></span></a>
                     <a onclick="copy()" target="_blank" title="Copy" data-media="<?php echo $row['photo']; ?>">
-                        <span class="fa fa-copy fa-2x"></span></a>
-                    <input type="text" hidden value="<?php echo $url; ?><?php echo $url; ?>" id="copy">
-                    <div><h6 id="copied"></h6></div>
+                        <span class="fa fa-copy fa-2x"></span></a><div><h6 id="copied"></h6></div>
+                    <input type="text" hidden value="<?php echo $url; ?>" id="copy">
+                    
                     <br><br>
                   </div>
                 </div>
