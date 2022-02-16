@@ -165,7 +165,7 @@
              <p>A monthly platform where relevant books are shared at the beginning of the month an is reviewed at the end of the month.
              <br><a href="category.php?id=13" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
 
-             <h4 class="title"><a href="category.php?id=14">Vocabulary</a></h4>
+             <h4 class="title"><a href="category.php?id=14">Vocabulary</a></h4><br>
              <p>New words in each book shared monthly form the book review is posted here.<br>
              <br><a href="category.php?id=14" class="btn-sm"  style=" color: white; background-color: #017478;  border-radius: 20px;">View Category</a></p>
 
