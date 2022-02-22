@@ -6,7 +6,7 @@
 	//$dbUsername = 'root';
 	//$dbPassword = '';
 
-	$dbDatabase = 'olapearls_blog';
+	$dbDatabase = 'olapearl_blog';
 
 	$adminConfig = array(
 		'adminUsername' => "admin",
